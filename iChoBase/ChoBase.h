@@ -10,6 +10,7 @@
 #import <UIKit/UIKit.h>
 #import "ChoBaseAccesser.h"
 
+
 @interface ChoBase : NSObject{
     ChoBaseAccesser* _accesser;
 }
@@ -32,3 +33,6 @@
 -(bool)setCgPoint:(CGPoint)val key_s:(NSString*)key;
 
 @end
+
+//chobaseSingletonInstance
+ChoBase* g_chobaseInstance;

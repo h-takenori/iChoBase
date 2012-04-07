@@ -10,21 +10,20 @@
 
 @implementation ChoBase
 
-ChoBase* _instance;
 
 + (ChoBase*) cb{
-    if(_instance == nil)
+    if(g_chobaseInstance == nil)
     {
-        _instance = [[[ChoBase alloc]init] retain];
+        g_chobaseInstance = [[ChoBase new] retain];
     }
-    return _instance;
+    return g_chobaseInstance;
 }
 
 - (id)init
 {
     self = [super init];
     if (self) {
-        _accesser = [[[[ChoBaseAccesser alloc]init]autorelease]retain];
+        _accesser = [[[ChoBaseAccesser new]autorelease]retain];
     }      
     return self;
 }
