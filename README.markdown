@@ -5,7 +5,7 @@ iChoBase is reference to FMDB https://github.com/ccgus/fmdb
 #Usage
 
 ##Install
-Copy all source and header files (*.c *.h) to your project.
+Copy all source and header files (*.h *.m) to your project.
 And reference SQLite library (libsqlite3.dylib).
 
 ##Init
@@ -27,6 +27,10 @@ You add values to iChoBase with the instance.
 
 ##Get string value by key
 	NSString *str = [choBase s:@"string_key"];
+
+##Delete value by key
+	BOOL result = [choBase del:@"key"];
+
 
 ##Check key is Exist?
 	BOOL b = [choBase hasKey:@"string_key"];
