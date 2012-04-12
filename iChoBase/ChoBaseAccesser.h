@@ -26,5 +26,6 @@
 -(NSString *)find:(NSString*)key;
 -(NSArray *)scan:(NSString*)key;
 -(bool)save:(NSString*)val key:(NSString*)key;
+-(bool)del:(NSString*)key;
 
 @end

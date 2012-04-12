@@ -11,7 +11,6 @@
 #define QueryFindByID @"select KvsValue from ChoBase where KvsKey = :KvsKey"
 #define QueryScanByID @"select KvsValue from ChoBase where KvsKey like :KvsKey order by KvsKey {0}"
 #define QueryCountByKey @"select count(KvsValue) from ChoBase where KvsKey like :KvsKey"
-#define QueryDeleteByKey @"delete from ChoBase where KvsKey = :KvsKey"
 #define QuerySelectTableName @"SELECT count(*) FROM SQLITE_MASTER WHERE TYPE ='table' AND NAME = '{0}'"
 
 @implementation ChoBaseAccesser
@@ -132,6 +131,15 @@
                      self.tableName] ;
     long long int unixtime = (long long int)[[NSDate date] timeIntervalSince1970];
     bool result = [db executeUpdate:sql , self.nameSpace , key , val , [NSNumber numberWithLongLong:unixtime]];
+    return result;
+}
+
+//delete by key
+-(bool)del:(NSString*)key{
+    
+    NSString* sql = [NSString stringWithFormat:@"delete from %@  where namespace = ? and cbkey = ?" ,
+                     self.tableName] ;
+    bool result = [db executeUpdate:sql , self.nameSpace , key];
     return result;
 }
 

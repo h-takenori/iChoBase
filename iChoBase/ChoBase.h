@@ -32,6 +32,9 @@
 -(bool)setI:(int)val key_s:(NSString*)key;
 -(bool)setCgPoint:(CGPoint)val key_s:(NSString*)key;
 
+//delete
+-(bool)del:(NSString*)val;
+
 @end
 
 //chobaseSingletonInstance

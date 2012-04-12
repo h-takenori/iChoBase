@@ -92,4 +92,9 @@
     return [self setS:val_s key_s:key];
 }
 
+//Delete
+-(bool)del:(NSString*)key{
+    return [_accesser del:key];
+}
+
 @end

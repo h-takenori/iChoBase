@@ -30,7 +30,11 @@
         [[ChoBase cb] setS:@"val" key_s:@"k"];
     }
     STAssertTrue([@"val" isEqualToString:[[ChoBase cb] s:@"k"]],@"check value" );
-    STFail(@"Unit tests are not implemented yet in iChoBaseTests");
+
+    [[ChoBase cb] del:@"k"];
+    STAssertFalse([[ChoBase cb]hasKey:@"k"],@"check is deleted" );
+    
+    
 }
 
 @end
