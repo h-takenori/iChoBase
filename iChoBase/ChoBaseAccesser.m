@@ -123,6 +123,23 @@
     return rtn;
 }
 
+//scan by key. get key and balue
+-(NSMutableArray *)scanEntity:(NSString*)key
+{
+    NSString *sql = [NSString stringWithFormat:@"SELECT cbkey , cbvalue FROM %@ WHERE namespace = ? and cbKey like ?" , self.tableName];
+    NSString *key_p =  [NSString stringWithFormat:@"%@%%" , key];
+    FMResultSet *result = [db executeQuery:sql , self.nameSpace , key_p];
+    NSMutableArray *rtn = [NSMutableArray array];
+    while ([result next]) {
+        ChoBaseEntity *entity = [ChoBaseEntity new];
+        entity.Key = [result stringForColumnIndex:0];
+        entity.Val = [result stringForColumnIndex:1];
+        [rtn addObject:entity];
+    }
+    [result close];
+    return rtn;
+}
+
 #define QueryReplace @"insert or update into ChoBase (KvsKey,KvsValue,updated) values (:KvsKey,:KvsValue,current_timestamp)"
 //create or update
 -(bool)save:(NSString*)val key:(NSString*)key{

@@ -7,11 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		411834D515498D5F00B79A2A /* ChoBaseEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 411834D415498D5F00B79A2A /* ChoBaseEntity.m */; };
 		4190339F153082E000C9A206 /* ChoBaseAccesser.m in Sources */ = {isa = PBXBuildFile; fileRef = 41903392153082E000C9A206 /* ChoBaseAccesser.m */; };
 		419033A0153082E000C9A206 /* ChoBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 41903393153082E000C9A206 /* ChoBase.m */; };
-		419033A2153082E000C9A206 /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 4190339A153082E000C9A206 /* FMDatabase.m */; };
-		419033A3153082E000C9A206 /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 4190339C153082E000C9A206 /* FMDatabaseAdditions.m */; };
-		419033A4153082E000C9A206 /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 4190339E153082E000C9A206 /* FMResultSet.m */; };
+		419033A2153082E000C9A206 /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 4190339A153082E000C9A206 /* FMDatabase.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		419033A3153082E000C9A206 /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 4190339C153082E000C9A206 /* FMDatabaseAdditions.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		419033A4153082E000C9A206 /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 4190339E153082E000C9A206 /* FMResultSet.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		419033A61530832600C9A206 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 419033A51530832600C9A206 /* libsqlite3.dylib */; };
 		41F0F0741530821400B6F1B5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41F0F0731530821400B6F1B5 /* UIKit.framework */; };
 		41F0F0761530821400B6F1B5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41F0F0751530821400B6F1B5 /* Foundation.framework */; };
@@ -37,6 +38,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		411834D315498D5F00B79A2A /* ChoBaseEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ChoBaseEntity.h; path = ../../iChoBase/ChoBaseEntity.h; sourceTree = "<group>"; };
+		411834D415498D5F00B79A2A /* ChoBaseEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ChoBaseEntity.m; path = ../../iChoBase/ChoBaseEntity.m; sourceTree = "<group>"; };
 		41903392153082E000C9A206 /* ChoBaseAccesser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ChoBaseAccesser.m; path = ../../iChoBase/ChoBaseAccesser.m; sourceTree = "<group>"; };
 		41903393153082E000C9A206 /* ChoBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ChoBase.m; path = ../../iChoBase/ChoBase.m; sourceTree = "<group>"; };
 		41903394153082E000C9A206 /* ChoBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ChoBase.h; path = ../../iChoBase/ChoBase.h; sourceTree = "<group>"; };
@@ -145,6 +148,8 @@
 				41903393153082E000C9A206 /* ChoBase.m */,
 				41903395153082E000C9A206 /* ChoBaseAccesser.h */,
 				41903392153082E000C9A206 /* ChoBaseAccesser.m */,
+				411834D315498D5F00B79A2A /* ChoBaseEntity.h */,
+				411834D415498D5F00B79A2A /* ChoBaseEntity.m */,
 				41903398153082E000C9A206 /* FMDB */,
 				41F0F07A1530821400B6F1B5 /* Supporting Files */,
 			);
@@ -293,6 +298,7 @@
 				419033A2153082E000C9A206 /* FMDatabase.m in Sources */,
 				419033A3153082E000C9A206 /* FMDatabaseAdditions.m in Sources */,
 				419033A4153082E000C9A206 /* FMResultSet.m in Sources */,
+				411834D515498D5F00B79A2A /* ChoBaseEntity.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -339,6 +345,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -363,6 +370,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;

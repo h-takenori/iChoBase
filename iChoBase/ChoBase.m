@@ -14,7 +14,7 @@
 + (ChoBase*) cb{
     if(g_chobaseInstance == nil)
     {
-        g_chobaseInstance = [[ChoBase new] retain];
+        g_chobaseInstance = [ChoBase new];
     }
     return g_chobaseInstance;
 }
@@ -23,7 +23,7 @@
 {
     self = [super init];
     if (self) {
-        _accesser = [[[ChoBaseAccesser new]autorelease]retain];
+        _accesser = [ChoBaseAccesser new];
     }      
     return self;
 }
@@ -71,6 +71,10 @@
 
 -(NSMutableArray*) scanS:(NSString*)key{
     return [_accesser scan:key];
+}
+
+-(NSMutableArray*) scanEntity:(NSString*)key{
+    return [_accesser scanEntity:key];
 }
 
 //Setter methods ==========================================================

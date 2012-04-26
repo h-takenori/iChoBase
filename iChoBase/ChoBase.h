@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 #import "ChoBaseAccesser.h"
-
+#include "ChoBaseEntity.h"
 
 @interface ChoBase : NSObject{
     ChoBaseAccesser* _accesser;
@@ -26,6 +26,7 @@
 -(CGPoint)cgPoint:(NSString*)key;
 -(NSMutableArray*) array:(NSString*)key separator:(NSString*)separator;
 -(NSMutableArray*) scanS:(NSString*)key;
+-(NSMutableArray*) scanRecord:(NSString*)key;
 
 //set value with value
 -(bool)setS:(NSString*)val key_s:(NSString*)key;

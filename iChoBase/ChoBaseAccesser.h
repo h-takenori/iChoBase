@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "FMDatabase.h"
 #import "FMDatabaseAdditions.h"
+#import "ChoBaseEntity.h"
 
 @interface ChoBaseAccesser : NSObject{
     NSString *fileName;
@@ -24,7 +25,8 @@
 
 -(bool)isExist:(NSString*)key;
 -(NSString *)find:(NSString*)key;
--(NSArray *)scan:(NSString*)key;
+-(NSMutableArray *)scan:(NSString*)key;
+-(NSMutableArray *)scanEntity:(NSString*)key;
 -(bool)save:(NSString*)val key:(NSString*)key;
 -(bool)del:(NSString*)key;
 
